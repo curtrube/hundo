@@ -38,7 +38,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="./index.html">
           <img src="./img/rubiks_cube.png" height="50" alt="Rubik's Cube" />
-          <span>Rubeck's Cube</span>
+          <span>Hundo</span>
         </a>
         <button
           class="navbar-toggler"
@@ -77,9 +77,37 @@
           <div class="col-lg-8">
             <pre class="line-numbers">
               <code class="language-javascript">
-                const helloWorld = () => {
-                  alert('Hello World');
-                };
+'use strict';
+
+const getResults = () => {
+  let minValue = document.getElementById('minValueInput').value;
+  let maxValue = document.getElementById('maxValueInput').value;
+
+  if (minValue) {
+    const results = {
+      minValue: minValue,
+      maxValue: maxValue,
+    };
+    console.log(results);
+  }
+
+  if (minValue < maxValue) {
+    let tableBody = document.getElementById('resultsBody');
+    tableBody.innerHTML = ``;
+
+    for (let i = minValue; i <= maxValue; i++) {
+      let tableRow = document.createElement('tr');
+      let tableData = document.createElement('td');
+
+      tableData.innerHTML = `${i}`;
+      tableRow.appendChild(tableData);
+      tableBody.appendChild(tableRow);
+    }
+  } else {
+    alert('Invalid Input');
+  }
+};
+                
             </code>
           </pre>
           </div>
