@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
-    <title>AppName : Coding Project by Curtis Rubeck</title>
+    <title>Hundo</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -70,7 +70,70 @@
     </nav>
     <!-- Main -->
     <main class="flex-shrink-0">
-      <h1>app.html</h1>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-12 col-lg-6">
+            <div>
+              <h1>
+                Hundo: Keep it
+                <span><img src="./img/Emoji_u1f4af.svg" alt="" /></span>
+              </h1>
+              <p class="lead">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+                magni nemo deserunt eos quibusdam odit! Rerum a atque
+                voluptatibus quos.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div>
+              <div>
+                <h3>Enter Values</h3>
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control mb-2"
+                  type="number"
+                  name="minValue"
+                  id="minValueInput"
+                  placeholder="Min"
+                />
+                <input
+                  class="form-control mb-3"
+                  type="number"
+                  name="maxValue"
+                  id="maxValueInput"
+                  placeholder="Max"
+                />
+              </div>
+              <div class="d-flex justify-content-center">
+                <button onclick="getResults();" class="btn btn-dark d-block">
+                  Display the Hundo
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div>
+              <h2>Instructions</h2>
+              <p>Type a range of number in and get some results.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div>
+              <h2>Results</h2>
+            </div>
+            <div>
+              <table class="table table-striped">
+                <thead>
+                  <tbody id="resultsBody">
+                  </tbody>
+                </thead>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <!-- Footer -->
     <footer class="footer mt-auto py-3 sticky-footer">
